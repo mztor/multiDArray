@@ -14,7 +14,7 @@ def loadData():
 
 def printFromArray():
 #this is a stub that does not work yet
-#convert the pseudocode from page 71 of the syllabus to print out
+#convert the pseudocode from page 71 of the course spec to print out
 #the total sales for each town AND the grand total sales
     print(sales)
 
@@ -30,7 +30,7 @@ else:
         for month in range(12):
             sales[town].append([]) #make an array for each month for the current town
             for product in range(4):
-                sales[town][month].append([]) #make an array for each product for the current month in the current town
+                sales[town][month].append(0) #make an array for each product for the current month in the current town
 
     #this section reads from the file into the array
     f.readline() #read the heading
@@ -39,7 +39,7 @@ else:
         town = int(data[0])
         month = int(data[1])
         product = int(data[2])
-        sales[town][month][product] = float(data[3])
+        sales[town][month][product] += float(data[3])
 
     f.close()
     printFromArray()
