@@ -39,7 +39,6 @@ else:
         town = int(data[0])
         month = int(data[1])
         product = int(data[2])
-        print(town, month, product)
         sales[town][month][product] = float(data[3])
 
     f.close()
